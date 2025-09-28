@@ -1,6 +1,14 @@
 def main():
     lorem_text = (
-        "\nThis is the third update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
+        "\nThis is the fourth update to the python code\n"
     )
     print(lorem_text)
 
