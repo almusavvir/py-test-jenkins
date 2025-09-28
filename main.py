@@ -1,6 +1,6 @@
 def main():
     lorem_text = (
-        "inital line change"
+        "\nIts working............................................................"
     )
     print(lorem_text)
 
