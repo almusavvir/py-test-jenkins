@@ -1,6 +1,6 @@
 def main():
     lorem_text = (
-        "\nIts working............................................................"
+        "\nThis is the third update to the python code\n"
     )
     print(lorem_text)
 
