@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page Demo</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .login-container h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 1.2rem;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #2575fc;
+      outline: none;
+      box-shadow: 0 0 6px rgba(37, 117, 252, 0.3);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.9rem;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+    }
+
+    .links {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .links a {
+      color: #2575fc;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      color: #6a11cb;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <form>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <div class="links">
+      <a href="#">Forgot Password?</a> | <a href="#">Sign Up</a>
+    </div>
+  </div>
+</body>
+</html>
