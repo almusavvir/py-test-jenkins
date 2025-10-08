@@ -1,14 +1,10 @@
 def main():
     lorem_text = (
-        "\nThis is the fourth update to the python code\n"
-        "\nThis is the fourth update to the python code\n"
-        "\nThis is the fourth update to the python code\n"
-        "\nThis is the fourth update to the python code\n"
-        "\nThis is the fourth update to the python code\n"
-        "\nThis is the fourth update to the python code\n"
-        "\nThis is the fourth update to the python code\n"
-        "\nThis is the fourth update to the python code\n"
-        "\nThis is the fourth update to the python code\n"
+        """Two roads diverged in a yellow wood,
+	 And sorry I could not travel both
+	 And be one traveler, long I stood
+	 And looked down one as far as I could
+	 To where it bent in the undergrowth"""
     )
     print(lorem_text)
 
