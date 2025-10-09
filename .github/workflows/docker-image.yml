@@ -23,15 +23,12 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/py-test-jenkins-docker
-        TAG=$(date +%s)
-        docker build -t $IMAGE_NAME:$TAG .
-        docker tag $IMAGE_NAME:$TAG $IMAGE_NAME:latest
+           IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/py-test-jenkins-docker
+           docker build -t $IMAGE_NAME:${TAG} .
+           docker tag $IMAGE_NAME:${TAG} $IMAGE_NAME:latest
 
     - name: Push image to Docker Hub
       run: |
-        IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/py-test-jenkins-docker
-        TAG=$(date +%s)
-        docker push $IMAGE_NAME:$TAG
-        docker push $IMAGE_NAME:latest
-
+           IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/py-test-jenkins-docker
+           docker push $IMAGE_NAME:${TAG}
+           docker push $IMAGE_NAME:latest
