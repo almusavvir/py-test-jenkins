@@ -18,8 +18,8 @@ jobs:
       run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
     - name: Set TAG
-        id: vars
-        run: echo "TAG=$(date +%s)" >> $GITHUB_ENV
+      id: vars
+      run: echo "TAG=$(date +%s)" >> $GITHUB_ENV
 
     - name: Build the Docker image
       run: |
