@@ -7,12 +7,27 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag py-test-jenkins-docker:$(date +%s)
+      run: |
+        IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/py-test-jenkins-docker
+        TAG=$(date +%s)
+        docker build -t $IMAGE_NAME:$TAG .
+        docker tag $IMAGE_NAME:$TAG $IMAGE_NAME:latest
+
+    - name: Push image to Docker Hub
+      run: |
+        IMAGE_NAME=${{ secrets.DOCKERHUB_USERNAME }}/py-test-jenkins-docker
+        TAG=$(date +%s)
+        docker push $IMAGE_NAME:$TAG
+        docker push $IMAGE_NAME:latest
+
